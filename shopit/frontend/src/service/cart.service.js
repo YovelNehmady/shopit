@@ -14,7 +14,7 @@ function query() {
   return sessionStorage.getItem(STORAGE_KEY)
 }
 
-function save(product) {
+function addToCart(product) {
   const products = query()
   products.push(product)
   return sessionStorage.setItem(STORAGE_KEY, products)
