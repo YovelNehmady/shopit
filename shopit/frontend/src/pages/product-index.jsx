@@ -11,7 +11,6 @@ export function ProductIndex() {
     }, [])
 
     return <section className="product-index">
-        Holla from Index
         <ProductList products={products} />
     </section>
 }

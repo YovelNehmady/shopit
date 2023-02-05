@@ -6,12 +6,13 @@ const STORAGE_KEY = "cart_DB"
 
 export const cartService = {
   query,
-  save,
-  remove,
+  addToCart,
 }
 
 function query() {
-  return sessionStorage.getItem(STORAGE_KEY)
+  let cart = sessionStorage.getItem(STORAGE_KEY)
+  if (!cart || !cart.length) cart = []
+  return cart
 }
 
 function addToCart(product) {
