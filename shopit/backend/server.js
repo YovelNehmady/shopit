@@ -20,11 +20,9 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const productRoutes = require('./api/product/product.routes')
-const cartRoutes = require('./api/cart/cart.routes')
 
 
 app.use('/api/product', productRoutes)
-app.use('/api/cart', cartRoutes)
 
 
 app.get('/**', (req, res) => {
